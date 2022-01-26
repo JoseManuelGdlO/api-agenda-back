@@ -6,8 +6,8 @@ use App\Http\Controllers\BaseController as BaseController;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use App\Models\Client;
-use App\Models\History;
+use App\Models\client;
+use App\Models\history;
 
 class clientsController extends BaseController
 {
@@ -64,7 +64,7 @@ class clientsController extends BaseController
 
         if(!is_null($response->hisotry)) {
             $input = $response->hisotry;
-            $hisotry = History::create($input);
+            $hisotry = history::create($input);
             $response->event->history_id = $hisotry->id;
         }
 
