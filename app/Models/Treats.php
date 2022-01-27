@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
 
-class history extends Model
+class Treats extends Model
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -21,7 +21,7 @@ class history extends Model
      */
     protected $fillable = [
         'id',
-        'date',
         'description',
+        'min_duration'
     ];
 }
