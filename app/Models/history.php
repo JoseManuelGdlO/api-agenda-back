@@ -23,5 +23,6 @@ class history extends Model
         'id',
         'date',
         'description',
+        'id_description',
     ];
 }

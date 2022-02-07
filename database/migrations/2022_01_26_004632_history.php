@@ -16,7 +16,7 @@ class History extends Migration
         Schema::create('history', function (Blueprint $table) {
             $table->id()->unique();
             $table->string('date');
-            $table->string('description');
+            $table->string('id_description');
         });
     }
 
