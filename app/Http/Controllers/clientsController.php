@@ -62,11 +62,9 @@ class clientsController extends BaseController
             return $this->sendError('Validation Error.', $validator->errors());       
         }
 
-        if(!is_null($response->hisotry)) {
-            $input = $response->hisotry;
-            $hisotry = history::create($input);
-            $response->event->history_id = $hisotry->id;
-        }
+        $input = $response->hisotry;
+        $hisotry = history::create($input);
+        $response->event->history_id = $hisotry->id;
 
         $input = $response->event;
         $event = Client::create($input);
